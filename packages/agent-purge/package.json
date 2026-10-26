@@ -1,0 +1,40 @@
+{
+  "name": "@magpie-community/middleware-agent-purge",
+  "version": "0.1.0",
+  "description": "Your agent-purge persona in the gateway's system prompt, in each agent API's own place for it, with a page to pick one. Reads ~/.agent-purge, so switching a persona there applies from the next request.",
+  "type": "module",
+  "files": [
+    "hooks.js",
+    "page",
+    "README.md"
+  ],
+  "keywords": [
+    "magpie",
+    "magpie-middleware",
+    "persona",
+    "system-prompt",
+    "agent-purge"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magpie-community/plugins.git",
+    "directory": "packages/agent-purge"
+  },
+  "magpie": {
+    "hooks": "./hooks.js",
+    "page": {
+      "title": "Persona",
+      "titles": {
+        "en": "Persona",
+        "zh": "人设",
+        "zh-TW": "人設"
+      },
+      "file": "page/index.html"
+    },
+    "permissions": [],
+    "options": {
+      "mode": "append"
+    }
+  }
+}
